@@ -27,6 +27,7 @@ The following new features and notable changes since version 0.47.0 are included
 
 - [New binaries and changes to supported environments](#binaries-and-supported-environments)
 - [Loading of the `zlibnx` library on AIX is disabled by default](#loading-of-the-zlibnx-library-on-aix-is-disabled-by-default)
+- ![Start of content that applies to Java 11 (LTS) and later](cr/java11plus.png) [JDWP support on Checkpoint/Restore In Userspace (CRIU) restore is enabled](#jdwp-support-on-checkpointrestore-in-userspace-criu-restore-is-enabled) ![End of content that applies to Java 11 (LTS) and later](cr/java_close.png)
 
 ## Features and changes
 
@@ -41,6 +42,14 @@ To learn more about support for OpenJ9 releases, including OpenJDK levels and pl
 From release 0.25.0 onwards, `zlibNX` hardware-accelerated data compression and decompression was enabled by default on AIX&reg;. From this release onwards, loading of the `zlibnx` library on AIX is disabled by default because using `zlibNX` might cause a `ClassNotFoundException` error. You can enable adding of the `zlibNX` library by using the `-XX:+UseZlibNX` option.
 
 For more information, see [`-XX:[+|-]UseZlibNX`](xxusezlibnx.md).
+
+### ![Start of content that applies to Java 11 (LTS) and later](cr/java11plus.png) JDWP support on Checkpoint/Restore In Userspace (CRIU) restore is enabled
+
+You can use the options that enable the JDWP support both on CRIU pre-checkpoint, and on restore as well.
+
+Also, a new parameter `suspendOnRestore`, specific to OpenJ9, is added to control the suspension of the target VM application on restore. You can use the `suspendOnRestore=n` setting to stop the suspension of the target application if the debugging is enabled on restore even if no debugging is set pre-checkpoint.
+
+For more information, see [`-Xrunjdwp`](xrunjdwp.md). ![End of content that applies to Java 11 (LTS) and later](cr/java_close.png)
 
 ## Known problems and full release information
 
