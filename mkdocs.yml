@@ -441,6 +441,7 @@ nav:
             - "-XX:[+|-]LazySymbolResolution"                                    : xxlazysymbolresolution.md
             - "-XX:[+|-]LegacyXLogOption"                                        : xxlegacyxlogoption.md
             - "-XX:MaxDirectMemorySize"                                          : xxmaxdirectmemorysize.md
+            - "-XX:[+|-]MemoryDisclaim"                                          : xxmemorydisclaim.md
             - "-XX:[+|-]MergeCompilerOptions"                                    : xxmergecompileroptions.md
             - "-XX:OnOutOfMemoryError"                                           : xxonoutofmemoryerror.md
             - "-XX:[+|-]OpenJ9CommandLineEnv"                                    : xxopenj9commandlineenv.md
